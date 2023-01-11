@@ -1,3 +1,136 @@
-h1 {
-    color: blue;
- }
+* {font-family: 'Raleway', sans-serif;
+}
+
+.mainparts
+{
+ display: flex;
+}
+
+.logo
+ { position: fixed;
+    width: 61.09px;
+    height: 19px;
+    left: 0px;
+    top: 0px;
+    padding-top: 44px;
+    padding-right: 1323.91px;
+    padding-bottom: 1821px;
+    padding-left: 55px;
+    }
+
+.menu 
+{  padding-top: 48px;
+   margin-left: 77px;
+   margin-right: 77px;
+   position: absolute;
+   left: 83.46%;
+   font-family: 'Raleway';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 19px;
+   text-align: center;
+   display: flex;
+   align-content: space-between;
+   list-style-type: none;
+}
+
+.activités, .hébergement
+{
+   margin-right: 77px;
+}
+
+.menu:hover
+{
+  border-top: 1ex;
+  border-color: rgba(0,101,252);
+}
+
+.titre1
+{
+   text-align: left;
+}
+
+.bluestar
+{
+   color:rgba(0,101,252);
+}
+
+.greystar
+{
+   color: grey;
+}
+
+.stars 
+{
+   display: flex;
+}
+
+.hebergementamarseille
+{
+   background-color: rgba(242,242,242,1);
+   margin-top: 250px;
+   margin-left: 5em;
+   width: 100em;
+   text-align: left;
+   
+}
+
+.cartehebergementmarseille
+{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+}
+
+.carteshebergement
+{
+   background-color: rgba(255,255,255,1);
+   margin-left: 3em;
+   
+}
+
+.cardimage
+{
+   width: 25em;
+}
+
+.lespluspopulaires
+{
+   background-color: rgba(242,242,242,1);
+   margin-left: 3em;
+   display: flex;
+   flex-direction: column;
+   width: 35em;
+   gap: 5em;
+   
+}
+.chart
+{
+   color: rgba(0,101,252);
+   text-align: right;
+
+}
+
+.cartespop
+{
+   background-color: rgba(255,255,255,1);
+   width:30em; 
+   margin: 2em;
+   
+}
+
+footer 
+{ 
+
+}
+.menufooter 
+{
+   list-style-type: none;
+   display: flex;
+   align-content: space-between;
+   justify-content: center;
+   gap: 700px;
+   background-color: rgba(242,242,242,1);
+   width: 92%;
+}
