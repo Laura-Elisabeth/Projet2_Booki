@@ -1,59 +1,107 @@
-* {font-family: 'Raleway', sans-serif;
+* {
+   font-family: 'Raleway', sans-serif;
 }
-
-.mainparts
-{
- display: flex;
-}
-
-.logo
- { position: fixed;
-    width: 61.09px;
-    height: 19px;
-    left: 0px;
-    top: 0px;
-    padding-top: 44px;
-    padding-right: 1323.91px;
-    padding-bottom: 1821px;
-    padding-left: 55px;
-    }
-
-.menu 
-{  padding-top: 48px;
-   margin-left: 77px;
-   margin-right: 77px;
-   position: absolute;
-   left: 83.46%;
-   font-family: 'Raleway';
-   font-style: normal;
-   font-weight: 400;
-   font-size: 16px;
-   line-height: 19px;
-   text-align: center;
+.header_section {
    display: flex;
-   align-content: space-between;
-   list-style-type: none;
+   justify-content: space-between; 
+}
+   
+.menu {
+   display: flex;
+   justify-content: end;
+   align-content: space-around;
 }
 
-.activités, .hébergement
-{
-   margin-right: 77px;
+.menu a {
+   display: block;
+   margin: 3rem;
 }
 
-.menu:hover
-{
-  border-top: 1ex;
-  border-color: rgba(0,101,252);
+.menu a:hover {
+  border-top: 1rem;
+  border-color: rgba(0,101,252,1);
 }
 
-.titre1
-{
-   text-align: left;
+main {
+   margin-top: 0.2em;
+   margin-left: 0.2rem;
+   margin-right :0.2rem;
 }
 
-.bluestar
-{
-   color:rgba(0,101,252);
+.wholebody {
+   display: grid;
+   grid-template-columns: 68% 32%;
+   grid-template-rows: 15% 55% 30% ;
+   grid-gap: 2rem;
+}
+
+.search_section {
+   grid-column: 1/3;
+   grid-row: 1/2;
+}
+
+.accomodation_section {
+   grid-column: 1/2;
+   grid-row: 2/3;
+   background-color: rgba(242,242,242,1);
+
+   display: grid;
+   grid-template-columns: 33% 34% 33%;
+   grid-template-rows: 50% 50%;
+   grid-gap: 2rem;
+}
+
+.cartehebergement_1 {
+   grid-column : 1/2 ;
+   grid-row : 1/2;
+}
+
+.cartehebergement_2 {
+   grid-column: 1/2;
+   grid-row: 2/3;
+}
+
+.popular_section {
+   grid-column: 2/3;
+   grid-row: 2/3;  
+   background-color: rgba(242,242,242,1);
+}
+
+.activity_section {
+   grid-column: 1/3 ;
+   grid-row: 3/4 ; 
+}
+
+.all_activity_cards {
+   display: flex;
+}
+
+.search_part {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+.topnav {
+   display: flex;
+}
+
+.location_icon {
+   background-color: rgba(242,242,242,1);
+}
+
+.topnav button {
+   background-color: rgba(0,101,252,1);
+   border: none;
+}
+
+.filters {
+   display: flex;
+   flex-direction: row;
+}
+
+.bluestar {
+   color: rgba(0, 101, 252);
 }
 
 .greystar
@@ -66,71 +114,63 @@
    display: flex;
 }
 
-.hebergementamarseille
-{
-   background-color: rgba(242,242,242,1);
-   margin-top: 250px;
-   margin-left: 5em;
-   width: 100em;
-   text-align: left;
-   
-}
-
-.cartehebergementmarseille
-{
-   display: flex;
-   flex-direction: row;
+.accomodation_cards {
+   background-color: rgba(242,242,242,1) ;
+   text-align: left ;
+   border-radius: 20px ;
+   display: flex ;
    flex-wrap: wrap;
+   justify-content: space-around ;
+
 }
 
 .carteshebergement
 {
    background-color: rgba(255,255,255,1);
-   margin-left: 3em;
-   
+   border-radius:20px; 
 }
 
-.cardimage
-{
-   width: 25em;
+.card_image {
+   width: 15rem;
+   height: 10rem;
 }
 
-.lespluspopulaires
+.title_pop {
+   display: flex;
+   justify-content: space-between;
+   padding: 1rem;
+}
+
+.popular_section
 {
    background-color: rgba(242,242,242,1);
-   margin-left: 3em;
+   border-radius: 20px;
    display: flex;
-   flex-direction: column;
-   width: 35em;
-   gap: 5em;
-   
+   justify-content: space-around;
+   align-content: center;
+   flex-direction: column;   
 }
-.chart
+
+.fa-chart-line
 {
    color: rgba(0,101,252);
    text-align: right;
-
 }
 
-.cartespop
-{
+.cartespop {
    background-color: rgba(255,255,255,1);
-   width:30em; 
-   margin: 2em;
-   
+   padding: 0.2rem;
+   margin: 1rem;
+   border-radius:20px;
+   width: 30rem;
 }
 
-footer 
-{ 
-
-}
-.menufooter 
-{
+.menufooter {
    list-style-type: none;
    display: flex;
-   align-content: space-between;
-   justify-content: center;
-   gap: 700px;
+   justify-content: space-between;   
    background-color: rgba(242,242,242,1);
-   width: 92%;
+   padding: 2rem;
 }
+
+
