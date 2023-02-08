@@ -29,6 +29,10 @@ figure { /* change this parameters to align cards! */
    font-size: 12px;
 }
 
+.fa-star {
+   font-size: 12px;
+}
+
 .stars {
    display: flex;
 }
@@ -38,7 +42,7 @@ figure { /* change this parameters to align cards! */
 }
 
 .greystar {
-   color: grey;
+   color: rgba(242,242,242,1);
 }
 
 .fa-chart-line {
@@ -67,6 +71,7 @@ figure { /* change this parameters to align cards! */
    display: space-around; /* not working, find out later why */ 
    gap: 3rem;
    padding-right: 3px;
+
 }
 
 .accomodations:hover, .activities:hover { /* managed to create a hover for the nav section of the header but still have to work ot the box's top border's height*/ 
@@ -76,8 +81,17 @@ figure { /* change this parameters to align cards! */
    border-top-style: solid;
 }
 
+.accomodations a:hover, .activities a:hover {
+   color: rgba(0,101,252,1);
+}
+
 .accomodations, .activities {
    padding-top: 1.5rem;
+}
+
+.accomodations a, .activities a {
+   text-decoration: none;
+   color: black;
 }
 
 /* defines section 1 (find accomodation) */
@@ -97,29 +111,26 @@ figure { /* change this parameters to align cards! */
 
 .accomodation-search {
    display: flex;
-
-   width: 10rem;
 }
 
 .location-icon {
-   align-items: center;
-   width: 2.5rem;
+   display: flex;
+   justify-content: center;
+   width: 2rem;
    background-color: rgba(242,242,242,1);
    border: none;
    border-top-left-radius: 15px;
    border-bottom-left-radius: 15px;
    
-   padding: 10px;
- 
+   padding: 0.5rem 0.25rem
 }
 
 input {
    height: 2.5rem;
-   width: 12rem;
+   width: 16rem;
    border-color: rgba(242,242,242,1);
    border-width: 1px;
    border-style: solid;
-
 }
 
 input::placeholder {
@@ -133,13 +144,18 @@ input::placeholder {
    border-top-right-radius: 15px;
    border-bottom-right-radius: 15px;
 
-   width: 7rem;
+   width: 100%;
    height: 100%;
+   padding: 0.5rem;
 }
 
-.search-button-text {
+.search-button .rechercher {
    color: white;
    text-decoration: solid;
+}
+
+.search-button .loupe {
+   display: none;
 }
 
 .filters {
@@ -161,6 +177,12 @@ input::placeholder {
 
 .filters a {
    font-weight: 600;
+   cursor: pointer;
+}
+
+.filter-buttons a {
+   text-decoration: none;
+   color: black;
 }
 
 .filters button {
@@ -171,8 +193,8 @@ input::placeholder {
    border-color: rgba(217,217,217,1);
    border-style: solid;
 
-   padding: 0.5rem;
-   width: 10rem;
+   padding: 0.5rem 1rem 0.5rem 1rem;
+   
    height: 100%;
 }
 
@@ -181,9 +203,13 @@ input::placeholder {
    
 }
 
-.availability-estimation p {
+.availability-estimation {
    font-size: small;
-   margin: 1rem 0 1rem 0;
+   display: flex;
+
+   margin-top: 1rem;
+
+   gap: 1px;
 }
 
 .info-font {
@@ -191,12 +217,17 @@ input::placeholder {
    border: 1px rgba(217, 217, 217, 1) solid;
    border-radius: 15px;
    padding: 4px 10px 4px 10px;
+   margin: 1px;
 
+   position: absolute;
 }
 
 .info-text {
-   font-weight: 400;
+   font-weight: 300;
+   font-size: medium;
+   margin-left: 2.5rem;
 
+   position: absolute;
 }
 
 /* defines the layout of the main sections */
@@ -281,10 +312,21 @@ body {
    gap: 0.5rem;
 }
 
+.figcaption-accomodation-card a {
+   text-decoration: none;
+   color: black;
+}
+
 .show-more {
    padding: 2rem 0 2rem 1rem;
    font-weight: 600;
    font-size: larger;
+   text-decoration: none;
+}
+
+.show-more a {
+   text-decoration: none;
+   color: black;
 }
 
 /* defines the layout of section 3*/
@@ -329,6 +371,7 @@ body {
 .pop-card {
    display: flex;
   
+   height: 33%;
    gap: 7px;
 }
 
@@ -368,6 +411,11 @@ body {
    justify-content: space-between;
 }
 
+.figcaption-pop-card a {
+   text-decoration: none;
+   color: black;
+}
+
 .name {
    font-weight: 700;
 }
@@ -387,19 +435,17 @@ body {
 .all-activity-cards {
    display: flex;
    justify-content: space-between;
-   flex-wrap: wrap;
 
-   gap:1rem
+   gap: 1rem;
 }
 
 .activity-card {
-   width: 22%;
+   width: 25%;
 }
 
 .activity-card-image {
+   aspect-ratio: 1.5 / 2.5;
    width: 100%;
-   height: 27rem; 
-
    border-radius: 20px 20px 0 0;
 }
 
@@ -417,6 +463,11 @@ body {
    height: 3rem;
 
    font-weight: 600;
+}
+
+.activity-card a {
+   text-decoration: none;
+   color: black;
 }
 
 /* defines footer */
@@ -450,56 +501,75 @@ footer {
 
 /* media queries for tablets */
 
-@media screen and (min-width: 501px) and (max-width: 991px) {
+@media screen and (min-width: 601px) and (max-width: 991px) {
+   .search-button i {
+      display: none;
+   }
+
+   .accomodations a:hover, .activities a:hover {
+      color: rgba(0,101,252,1);
+   }
+
    .accomodation-section {
       width: 100%;
+   }
+
+   .accomodation-card {
+      width: 30%;
    }
    
    .accomodation-card-image {
       height: 8rem;
-      width: 15rem;
-
+      width: 100%;
    }
    
    .popular-section {
       width: 100%;
 
-      padding: 0.5rem;
+      padding: 0rem;
    }
 
    .pop-cards {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-
-      gap: 1rem;
+      
+      gap: 0.5rem;
    }
 
    .pop-card {
-      width: 16rem;
+      width: 13rem
    }
 
    .pop-card-image {
-      width: 7rem;
+      width: 6rem;
    }
 
-   .activity-cards {
-      width: 100%;
-   } 
+   .all-activity-cards {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
 
+      gap: 1rem;
+   } 
+   
    .activity-card {
-      width: 14rem;
+      width: 25%;
    }
 
    .activity-card-image {
-      width: 14rem;
-      height: 15rem;
+      width: 100%;
    }
 }
 
+
 /* media queries for phones */
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
+   body {
+      margin: 0;
+   }
+
    .header-section {
       display: flex;
       flex-direction: column;
@@ -508,6 +578,11 @@ footer {
    .logo {
       display: flex;
       justify-content: center;
+   }
+
+   .logo-img {
+      width: 5rem;
+      height: 1.75rem;
    }
 
    .nav {
@@ -527,11 +602,36 @@ footer {
    }
 
    .accomodations:hover, .activities:hover {
-      border-top: none;
+      border-top: none ;
 
-      border-bottom: 3px solid rgba(0,101,252,1);    
+      color: rgba(0,101,252,1);
+
+      border-bottom-style: solid;   
+      border-bottom-width: 3px;
+   }
+
+   .accomodations a:hover, .activities a:hover{
+      color: rgba(0,101,252,1);
    }
  
+   .search-section {
+      padding: 0 0.5rem 0.5rem 0.5rem;
+   }
+
+   .accomodation-search {
+      width: 100%;
+   }
+
+   .search-button .rechercher {
+      display: none;
+   }
+
+   .search-button .loupe {
+      display: contents;
+      color: white;
+
+   }
+
    .filters { 
       display: flex;
       flex-direction: column;
@@ -542,17 +642,38 @@ footer {
       justify-content: center;
    }
 
+   .filters button {
+      width: 10.5rem;
+     
+      padding: 0.75rem 0.75rem 0.75rem 0.75rem;
+
+      text-align: left;
+   }
+
+   .inside-section-3 {
+      gap: 1rem;
+      padding: 1rem 1rem 3rem 1rem;
+   }
+
    .popular-section {
       order: 0;
 
       width: 100%;
+      border-radius: 0;
    }
 
    .pop-cards {
       display: flex;
       flex-direction: column;
       justify-content: center;
+
+      gap: 1rem;
    } 
+
+   .pop-card {
+      gap: 1rem;
+      padding-right: 1rem;
+   }
 
    .accomodation-section {
       order: 1;
@@ -567,46 +688,55 @@ footer {
       justify-content: center;
 
       gap: 1rem;
-
    }
 
    .accomodation-card {
-     width: 100%;
+      width: 25rem; 
    }
 
    .accomodation-card-image {
       width: 100%;
-      height: 10rem;
-
+      height: 12rem;
    }
 
    .show-more {
       display: none;
+      text-decoration: none;
    }
 
    .activity-section {
       display: flex;
       justify-content: center;
-
    }
 
    .all-activity-cards {
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: space-between;
+
+      gap: 1rem;
    }
 
    .activity-card {
-      width: 90%;
+      width: 22rem;
    }
 
    .activity-card-image {
+
       width: 100%;
+      height: 15rem;
    }
 
    .footer-nav {
       display: flex;
       flex-direction: column;
+
+      font-weight: 300;
+      gap: 3rem;
+   }
+
+   .footer-nav .about, .footer-nav .offer, .footer-nav .help {
+      gap: 0.5rem;
    }
 }
 

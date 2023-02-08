@@ -2,6 +2,7 @@
 <html>
 
 <head>
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
    <title>Booki</title>
    <meta charset="utf-8">
    <link rel="stylesheet" type="text/css" href="styles.css">
@@ -26,10 +27,10 @@
          <nav>
             <div class="nav">
             <div class="accomodations">
-               <a>Hébergements</a>
+               <a href="">Hébergements</a>
             </div>
             <div class="activities">
-               <a>Activités</a>
+               <a href="">Activités</a>
             </div>
             </div>
          </nav>
@@ -56,7 +57,12 @@
                         <input type="text" placeholder="  Marseille, France">
                      </div>
                      <div class="search-button">
-                        <button type="submit"><div class="search-button-text">Rechercher</div></button>
+                        <button type="submit">
+                           <a href="" class="rechercher">Rechercher</a> 
+                           <a href="" class="loupe">
+                              <i class="fa-solid fa-magnifying-glass"></i>
+                           </a>
+                        </button>
                      </div>
                   </div>
                   <div class="filters">
@@ -67,33 +73,41 @@
                      <div class="costsaving">
                         <button>
                            <i class="fa-solid fa-money-bill-wave"></i>
-                           <a>Économique</a>
+                           <a href="">Économique</a>
                         </button>
                      </div>
                      <div class="family">
                         <button>
                            <i class="fa-solid fa-person"></i>
-                           <a>Familial</a>
+                           <a href="">Familial</a>
                         </button>
                      </div>
                      <div class="romantic">
                         <button>
                            <i class="fa-solid fa-heart"></i>
-                           <a>Romantique</a>
+                           <a href="">Romantique</a>
                         </button>
                      </div>
                      <div class="pet-friendly">
                         <button>
                            <i class="fa-solid fa-dog"></i>
-                           <a>Animaux autorisés</a>
+                           <a href="">Animaux autorisés</a>
                         </button>
                      </div>
                      </div>
                   </div>
                   <div class="availability-estimation">
                      <p>
-                        <a class="info-font"><i class="fa-solid fa-info"></i></a>
-                        <a class="info-text">Plus de 500 logements sont disponibles dans cette ville</a>
+                        <div>
+                           <a class="info-font">
+                              <i class="fa-solid fa-info"></i>
+                           </a>
+                        </div>
+                        <div>
+                           <a class="info-text">
+                              Plus de 500 logements sont disponibles dans cette ville
+                           </a>
+                        </div>
                      </p>
                   </div>
                </div>
@@ -117,7 +131,7 @@
                            <figcaption>
                            <div class="figcaption-accomodation-card">
                                  <div class="name">
-                                    Auberge La Canebière
+                                    <a href="">Auberge La Canebière</a>
                                  </div>
                                  <div class="price">
                                     Nuit à partir de 25€ 
@@ -142,7 +156,7 @@
                            <figcaption>
                               <div class="figcaption-accomodation-card">
                                  <div class="name">
-                                    Hôtel du port
+                                    <a href="">Hôtel du port</a>
                                  </div>
                                  <div class="price">
                                     Nuit à partir de 52€
@@ -167,7 +181,7 @@
                            <figcaption>
                               <div class="figcaption-accomodation-card">
                                  <div class="name">
-                                    Hôtel Les mouettes
+                                    <a href="">Hôtel Les mouettes</a>
                                  </div>
                                  <div class="price">
                                     Nuit à partir de 76€
@@ -192,7 +206,7 @@
                            <figcaption>
                               <div class="figcaption-accomodation-card">
                                 <div class="name">
-                                    Hôtel de la mer
+                                    <a href="">Hôtel de la mer</a>
                                 </div>
                                 <div class="price">
                                        Nuit à partir de 46€
@@ -217,9 +231,9 @@
                            <figcaption>
                               <div class="figcaption-accomodation-card">
                                  <div class="name">
-                                    Auberge Le Panier
+                                    <a href="">Auberge Le Panier</a>
                                  </div>
-                                 <div>
+                                 <div class="price">
                                     Nuit à partir de 23€
                                  </div> 
                                  <div class="stars">
@@ -242,7 +256,7 @@
                            <figcaption>
                               <div class="figcaption-accomodation-card">
                                  <div class="name">
-                                    Hôtel Chez Amina
+                                    <a href="">Hôtel Chez Amina</a>
                                  </div>
                                  <div class="price">
                                     Nuit à partir de 96€
@@ -261,7 +275,7 @@
                   </div>
                </div>
                <div class=show-more>
-                  Afficher plus
+                  <a href="">Afficher plus</a>
                </div>
             </div>
          </section>
@@ -275,7 +289,9 @@
                      <h1 class="title-2">Les plus populaires</h1>
                   </div>
                   <div class="chart-icon">
-                     <i class="fa-solid fa-chart-line"></i>
+                     <a href="">
+                        <i class="fa-solid fa-chart-line"></i>
+                     </a>
                   </div>
                </div>
                <div class="pop-cards">
@@ -290,7 +306,7 @@
                                  <div class="figcaption-pop-card">
                                  <div class="pop-text">
                                  <div class="name">
-                                    Hôtel Le soleil du matin
+                                    <a href="">Hôtel Le soleil du matin</a>
                                  </div>
                                  <div class="price">
                                        
@@ -321,7 +337,7 @@
                               <div class="figcaption-pop-card">
                                  <div class="pop-text">
                                     <div class="name">
-                                       Chambre d'hôtes Au coeur de l'eau
+                                       <a href="">Chambres d'hôtes Au coeur de l'eau</a> 
                                     </div>
                                     <div class="price">
                                        
@@ -352,7 +368,7 @@
                                  <div class="figcaption-pop-card">
                                  <div class="pop-text">
                                     <div class="name">
-                                       Hôtel Bleu et Blanc
+                                       <a href="">Hôtel Bleu et Blanc</a>
                                     </div>
                                     <div class="price">
                                        
@@ -392,7 +408,7 @@
             <img src="images/activites/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg"   
                alt="Vieux-Port" class="activity-card-image">
             <figcaption>
-               Vieux-Port
+               <a href="">Vieux-Port</a>
             </figcaption>
             </figure>
             </article>
@@ -403,7 +419,7 @@
             <img src="images/activites/3_medium/paul-hermann-QFTrLdQIRhI-unsplash.jpg" 
                alt="Fort de Pomègues" class="activity-card-image">
             <figcaption>
-               Fort de Pomègues 
+               <a href="">Fort de Pomègues</a>
             </figcaption>
             </figure>
             </article>
@@ -414,7 +430,7 @@
             <img src="images/activites/3_medium/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" 
                alt="Parc national des Calanques" class="activity-card-image">
             <figcaption>
-               Parc national des Calanques
+               <a href="">Parc national des Calanques</a>
             </figcaption>
             </figure>
             </article>
@@ -424,8 +440,8 @@
             <figure class="activity-figure">
                <img src="images/activites/3_medium/florian-wehde-xW9e8gdotxI-unsplash.jpg" 
                   alt="Notre-Dame-de-la-Garde" class="activity-card-image">
-               <figcaption>
-               Notre-Dame-de-la-Garde
+            <figcaption>
+               <a href="">Notre-Dame-de-la-Garde</a>
                </figcaption>
                </figure>
             </article>
