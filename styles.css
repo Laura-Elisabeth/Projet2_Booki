@@ -10,10 +10,21 @@ figure { /* change this parameters to align cards! */
 /* defines all necessary icons */
 
 .location-icon {
+   display: flex;
+   align-items: center;
+
    background-color: rgba(242,242,242,1);
    border-top-left-radius: 20px;
    border-bottom-left-radius: 20px;
-   width: 20px;
+}
+
+.fa-location-dot {
+   display: flex;
+   align-items: center;
+
+   
+
+   margin: 2.5px;
 }
 
 .fa-solid {
@@ -30,7 +41,7 @@ figure { /* change this parameters to align cards! */
 }
 
 .fa-star {
-   font-size: 12px;
+   font-size: 16px;
 }
 
 .stars {
@@ -48,6 +59,8 @@ figure { /* change this parameters to align cards! */
 .fa-chart-line {
    color: rgba(0,101,252);
    text-align: right;
+
+   font-size: 24px;
 }
 
 /* defines the header */
@@ -58,12 +71,12 @@ figure { /* change this parameters to align cards! */
 }
 
 .logo {
-   padding-top: 1.5rem;
+   padding-top: 2.5rem;
 }
 
 .logo-img {
    width: 6rem;
-   height: 2rem;
+   height: 1.75rem;
 }
    
 .nav {
@@ -71,7 +84,10 @@ figure { /* change this parameters to align cards! */
    display: space-around; /* not working, find out later why */ 
    gap: 3rem;
    padding-right: 3px;
+}
 
+.accomodations, .activities {
+   border-top: 3px solid white;
 }
 
 .accomodations:hover, .activities:hover { /* managed to create a hover for the nav section of the header but still have to work ot the box's top border's height*/ 
@@ -86,12 +102,23 @@ figure { /* change this parameters to align cards! */
 }
 
 .accomodations, .activities {
-   padding-top: 1.5rem;
+   padding-top: 2.5rem;
 }
 
 .accomodations a, .activities a {
    text-decoration: none;
    color: black;
+}
+
+/* displays titles as links */
+
+.link-titles {
+   text-decoration: none;
+   color: black;
+}
+
+.link-titles:hover {
+   color: rgba(0,101,252,1);
 }
 
 /* defines section 1 (find accomodation) */
@@ -104,6 +131,10 @@ figure { /* change this parameters to align cards! */
    gap: 1rem;
 }
 
+.title-section-1 {
+   font-size: large;
+}
+
 .inside-section-1 p {
    font-weight: 300;
    margin-top: 0px;
@@ -111,23 +142,29 @@ figure { /* change this parameters to align cards! */
 
 .accomodation-search {
    display: flex;
+   width: 22rem;
 }
 
 .location-icon {
    display: flex;
    justify-content: center;
-   width: 2rem;
+   width: 13%;
+   height: 2.5;
    background-color: rgba(242,242,242,1);
    border: none;
    border-top-left-radius: 15px;
    border-bottom-left-radius: 15px;
    
-   padding: 0.5rem 0.25rem
+   padding: 0.5rem 0.25rem;
+}
+
+.search-bar {
+   width: 56%;
 }
 
 input {
-   height: 2.5rem;
-   width: 16rem;
+   height: 3rem;
+   width: 100%;
    border-color: rgba(242,242,242,1);
    border-width: 1px;
    border-style: solid;
@@ -136,6 +173,10 @@ input {
 input::placeholder {
    font-weight: 600;
    opacity: 1;
+}
+
+.search-button {
+   width: 31%;
 }
 
 .accomodation-search button {
@@ -152,9 +193,12 @@ input::placeholder {
 .search-button .rechercher {
    color: white;
    text-decoration: solid;
+   font-weight: 600;
+   font-size: medium;
+   padding: 3px;
 }
 
-.search-button .loupe {
+.search-button .magnifying-glass {
    display: none;
 }
 
@@ -162,6 +206,7 @@ input::placeholder {
    display: flex;
    flex-direction: row;
    flex-direction: left;
+   align-items: center;
    justify-content: space-between;
 
    gap: 1rem;
@@ -171,6 +216,7 @@ input::placeholder {
 .filter-buttons {
    display: flex;
    flex-wrap: wrap;
+
    
    gap: 1rem; 
 }
@@ -183,6 +229,7 @@ input::placeholder {
 .filter-buttons a {
    text-decoration: none;
    color: black;
+   margin-left: 0.20rem;
 }
 
 .filters button {
@@ -200,14 +247,14 @@ input::placeholder {
 
 .filters button:hover {
    background-color: rgba(0,101,252,0.2);
-   
 }
 
 .availability-estimation {
    font-size: small;
    display: flex;
+   align-items: center;
 
-   margin-top: 1rem;
+   margin: 1rem 0 1rem 0;
 
    gap: 1px;
 }
@@ -216,13 +263,19 @@ input::placeholder {
    color: rgba(0, 101, 252, 1);
    border: 1px rgba(217, 217, 217, 1) solid;
    border-radius: 15px;
-   padding: 4px 10px 4px 10px;
+   padding: 6px 10px 6px 10px;
    margin: 1px;
 
    position: absolute;
+
+   display: flex;
+   align-items: center;
 }
 
 .info-text {
+   display: flex;
+   align-items: center;
+
    font-weight: 300;
    font-size: medium;
    margin-left: 2.5rem;
@@ -237,11 +290,11 @@ main {
    flex-direction: column;
 
    gap: 2rem;
-   margin: 3rem 0 3rem 0;
+   margin: 3rem 0rem 3rem 0rem;
 }
 
 body {
-   margin: 0 1rem 0 1rem;
+   margin: 0rem 2rem 0rem 2rem;
 }
 
 .accomodation-and-pop-sections {
@@ -271,21 +324,24 @@ body {
    display: flex;
    flex-direction: column;
    justify-content: space-between;
+
+   gap: 2rem;
+   padding: 0.5rem 2rem 0.5rem 2rem;
 }
 
 .title-section-2 {
-   padding: 2rem 0 1rem 1rem;
+   padding: 2rem 0 1rem 0rem;
 }
 
 .accomodation-cards {
    display: flex;
    align-items: center;
    flex-wrap: wrap;
-   justify-content: space-around;
+   justify-content: space-between;
    
 
-   gap: 1rem;
-   margin: 1rem;
+   gap: 0.75rem;
+   padding: 0rem 0rem 1rem 0rem;
 }
 
 .accomodation-card-image {
@@ -295,6 +351,8 @@ body {
    border-top-left-radius: 20px; /* same, will need to change the corner 
                                     for other sections that accomodation*/
    border-top-right-radius: 20px;
+
+   object-fit: cover ;
 }                
 
 .accomodation-figure {
@@ -309,12 +367,16 @@ body {
 .figcaption-accomodation-card {
    display: flex;
    flex-direction: column;
-   gap: 0.5rem;
+   gap: 1rem;
 }
 
 .figcaption-accomodation-card a {
    text-decoration: none;
    color: black;
+}
+
+.figcaption-accomodation-card a:hover {
+   color: rgba(0, 101, 252, 1);
 }
 
 .show-more {
@@ -327,6 +389,10 @@ body {
 .show-more a {
    text-decoration: none;
    color: black;
+}
+
+.show-more a:hover {
+   color: rgba(0,101,252,1);
 }
 
 /* defines the layout of section 3*/
@@ -349,7 +415,7 @@ body {
    justify-content: space-between;
 
    padding: 1rem;
-   gap: 3rem;
+   gap: 2rem;
 }
 
 .header-section-3 {
@@ -363,16 +429,19 @@ body {
 .pop-cards {
    display: flex;
    flex-direction: column;
-   justify-content: space-evenly;
 
    gap: 4.5rem;
+   height: 80%;
 }
 
 .pop-card {
    display: flex;
+   align-items: center;
+   justify-content: space-between;
   
-   height: 33%;
-   gap: 7px;
+   height: 33%; 
+
+   gap: 0.75rem
 }
 
 .pop-figure {
@@ -389,20 +458,20 @@ body {
 
 .pop-card-image {
    width: 135px;
-   height: 135px; /* must be redefined by sections because 
+   height: 150px; /* must be redefined by sections because 
                      the pictures have different size depending on the section */
    border-top-left-radius: 20px; /* same, will need to change the corner 
                                     for other sections that accomodation*/
    border-bottom-left-radius: 20px;
+
+   object-fit: cover;
 }
 
 .figcaption-pop-card {
    display: flex;
    flex-direction: column;
-   justify-content: space-between;
-   
-   height: 100%;
-   width: 100%;
+
+   gap: 4rem;
 }
 
 .pop-text {
@@ -414,6 +483,11 @@ body {
 .figcaption-pop-card a {
    text-decoration: none;
    color: black;
+}
+
+.figcaption-pop-card a:hover {
+   color: rgba(0,101,252,1);
+
 }
 
 .name {
@@ -444,8 +518,9 @@ body {
 }
 
 .activity-card-image {
-   aspect-ratio: 1.5 / 2.5;
+   object-fit: cover;
    width: 100%;
+   height: 27rem;
    border-radius: 20px 20px 0 0;
 }
 
@@ -470,11 +545,11 @@ body {
    color: black;
 }
 
-/* defines footer */
-
-footer {
-
+.activity-card a:hover {
+   color: rgba(0,101,252,1);
 }
+
+/* defines footer */
 
 .footer-nav {
    list-style-type: none;
@@ -497,253 +572,43 @@ footer {
    width: 100%;  
 }
 
-/* following sections are for screen size adapation*/
-
-/* media queries for tablets */
-
-@media screen and (min-width: 601px) and (max-width: 991px) {
-   .search-button i {
-      display: none;
-   }
-
-   .accomodations a:hover, .activities a:hover {
-      color: rgba(0,101,252,1);
-   }
-
-   .accomodation-section {
-      width: 100%;
-   }
-
-   .accomodation-card {
-      width: 30%;
-   }
-   
-   .accomodation-card-image {
-      height: 8rem;
-      width: 100%;
-   }
-   
-   .popular-section {
-      width: 100%;
-
-      padding: 0rem;
-   }
-
-   .pop-cards {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      
-      gap: 0.5rem;
-   }
-
-   .pop-card {
-      width: 13rem
-   }
-
-   .pop-card-image {
-      width: 6rem;
-   }
-
-   .all-activity-cards {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-
-      gap: 1rem;
-   } 
-   
-   .activity-card {
-      width: 25%;
-   }
-
-   .activity-card-image {
-      width: 100%;
-   }
+.footer-nav a {
+   text-decoration: none;
+   color: black;
 }
 
-
-/* media queries for phones */
-
-@media screen and (max-width: 600px) {
-   body {
-      margin: 0;
-   }
-
-   .header-section {
-      display: flex;
-      flex-direction: column;
-   }
-
-   .logo {
-      display: flex;
-      justify-content: center;
-   }
-
-   .logo-img {
-      width: 5rem;
-      height: 1.75rem;
-   }
-
-   .nav {
-      gap: 0rem;
-   }
-
-   .accomodations, .activities {
-      display: flex;
-      justify-content: center;
-      
-      width: 100%;
-      padding: 2rem 0 1rem 0;
-
-      border-bottom-width: 3px;
-      border-bottom-style: solid;
-      border-color: rgba(242,242,242,1);
-   }
-
-   .accomodations:hover, .activities:hover {
-      border-top: none ;
-
-      color: rgba(0,101,252,1);
-
-      border-bottom-style: solid;   
-      border-bottom-width: 3px;
-   }
-
-   .accomodations a:hover, .activities a:hover{
-      color: rgba(0,101,252,1);
-   }
- 
-   .search-section {
-      padding: 0 0.5rem 0.5rem 0.5rem;
-   }
-
-   .accomodation-search {
-      width: 100%;
-   }
-
-   .search-button .rechercher {
-      display: none;
-   }
-
-   .search-button .loupe {
-      display: contents;
-      color: white;
-
-   }
-
-   .filters { 
-      display: flex;
-      flex-direction: column;
-   }
-
-   .filter-buttons {
-      display: flex;
-      justify-content: center;
-   }
-
-   .filters button {
-      width: 10.5rem;
-     
-      padding: 0.75rem 0.75rem 0.75rem 0.75rem;
-
-      text-align: left;
-   }
-
-   .inside-section-3 {
-      gap: 1rem;
-      padding: 1rem 1rem 3rem 1rem;
-   }
-
-   .popular-section {
-      order: 0;
-
-      width: 100%;
-      border-radius: 0;
-   }
-
-   .pop-cards {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-
-      gap: 1rem;
-   } 
-
-   .pop-card {
-      gap: 1rem;
-      padding-right: 1rem;
-   }
-
-   .accomodation-section {
-      order: 1;
-
-      background-color: white;
-
-      width: 100%;
-   }
-
-   .accomodation-cards {
-      display: flex;
-      justify-content: center;
-
-      gap: 1rem;
-   }
-
-   .accomodation-card {
-      width: 25rem; 
-   }
-
-   .accomodation-card-image {
-      width: 100%;
-      height: 12rem;
-   }
-
-   .show-more {
-      display: none;
-      text-decoration: none;
-   }
-
-   .activity-section {
-      display: flex;
-      justify-content: center;
-   }
-
-   .all-activity-cards {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-
-      gap: 1rem;
-   }
-
-   .activity-card {
-      width: 22rem;
-   }
-
-   .activity-card-image {
-
-      width: 100%;
-      height: 15rem;
-   }
-
-   .footer-nav {
-      display: flex;
-      flex-direction: column;
-
-      font-weight: 300;
-      gap: 3rem;
-   }
-
-   .footer-nav .about, .footer-nav .offer, .footer-nav .help {
-      gap: 0.5rem;
-   }
+.footer-nav a:hover {
+   color:rgba(0,101,252,1)
 }
 
 /* media queries very big screens */
 
-@media screen and (min-width: 2000px) {
+@media screen and (min-width: 1550px) {
+   body {
+      margin: 0 4% 0 4%;
+   }
+}
+
+@media screen and (min-width: 1700px) {
+   body {
+      margin: 0 14% 0 14%;
+   }
+}
+
+@media screen and (min-width: 2100px) {
    body {
       margin: 0 20% 0 20%;
+   }
+}
+
+@media screen and (min-width: 2200px) {
+   body {
+      margin: 0 25% 0 25%;
+   }
+}
+
+@media screen and (min-width: 2900px) {
+   body {
+      margin: 0 35% 0 35%;
    }
 }
