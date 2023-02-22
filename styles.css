@@ -295,12 +295,16 @@ main {
    flex-direction: column;
 
    gap: 2rem;
-   margin: 3rem 1rem 3rem 1rem;
+   margin: 3rem 1rem 3rem 1rem;   
 }
 
 body {
    margin: 0rem 1.5rem 0rem 1.5rem;
+
+   max-width: 1400px;  
+   margin: auto;
 }
+
 
 .accomodation-and-pop-sections {
    display: flex;
@@ -340,12 +344,13 @@ body {
    justify-content: center;
 
    gap: 1rem;
-
-   margin: 0rem 1rem;
+}
+.accomodation-card {
+   width: 30%;
 }
 
 .accomodation-card-image {
-   width: 14rem;
+   width: 100%;
    height: 7rem; 
 
    border-top-left-radius: 20px; 
@@ -589,7 +594,7 @@ footer a:hover {
 
 /* media queries for tablets */
 
-@media screen and (min-width: 768px) and (max-width: 991px) {
+@media screen and (min-width: 769px) and (max-width: 991px) {
    .search-button i {
       display: none;
    }
@@ -635,20 +640,20 @@ footer a:hover {
 
       width: 100%;
 
-      gap: 1rem;
+      gap: 2rem;
    }
 
    .pop-card {
       display: flex;
       flex-direction: row;
 
-      width: 13rem;
+      width: 30%;
       height: 100%;
    }
 
    .pop-card-image {
-      width: 6rem;
-      height: 8rem
+      width: 7rem;
+      height: 8.5rem;
    }
 
    .figcaption-pop-card {
@@ -676,7 +681,7 @@ footer a:hover {
 
 /* media queries for phones */
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
    body {
       margin: 0rem; 
       padding: 0rem;
@@ -742,7 +747,7 @@ footer a:hover {
    }
 
    .title-section-1 {
-      font-size: x-large;
+      font-size: larger;
    }
 
    .accomodation-search {
@@ -822,6 +827,8 @@ footer a:hover {
       width: 100%;
 
       gap: 0.5rem;
+
+   
    }
 
    .costsaving, .family, .romantic, .pet-friendly {
@@ -830,7 +837,7 @@ footer a:hover {
 
       display: flex;
       
-      padding-left: 0.5rem;
+      padding-left: 0.75rem;
    }
 
    .costsaving a, .family a, .romantic a, .pet-friendly a {
@@ -849,7 +856,7 @@ footer a:hover {
 
    .inside-section-3 {
       gap: 1rem;
-      padding: 1rem 2rem 3rem 2rem;
+      padding: 1rem 1rem 3rem 1rem;
    }
 
    .popular-section {
@@ -857,6 +864,8 @@ footer a:hover {
 
       width: 100%;
       border-radius: 0;
+
+      padding: 0.25rem;
    }
 
    .title-section-3 {
@@ -869,8 +878,6 @@ footer a:hover {
       justify-content: space-between;
       
       gap: 2rem;
-
-      padding-top: 0rem;
    } 
 
    .pop-card {
@@ -914,11 +921,15 @@ footer a:hover {
       background-color: white;
    }
 
+   .title-section-2 {
+     padding-left: 0.5rem;
+   }
+
    .accomodation-cards {
       display: flex;
       justify-content: center;
 
-      gap: 1rem;
+      gap: 2rem;
    }
 
    .accomodation-card {
@@ -941,7 +952,8 @@ footer a:hover {
    }
 
    .activity-section {
-       padding: 2rem;
+       padding: 1rem 1rem 2rem 1rem;
+
    }
 
    .all-activity-cards {
@@ -949,7 +961,7 @@ footer a:hover {
       flex-direction: column;
       justify-content: center;
 
-      gap: 1rem;
+      gap: 2rem;
    }
 
    .activity-card {
@@ -975,37 +987,6 @@ footer a:hover {
    }
 }
 
-/* media queries very big screens */
-
-@media screen and (min-width: 1401px) {
-   body {
-      margin: 0 4% 0 4%;
-   }
-}
-
-@media screen and (min-width: 1700px) {
-   body {
-      margin: 0 14% 0 14%;
-   }
-}
-
-@media screen and (min-width: 2100px) {
-   body {
-      margin: 0 20% 0 20%;
-   }
-}
-
-@media screen and (min-width: 2200px) {
-   body {
-      margin: 0 25% 0 25%;
-   }
-}
-
-@media screen and (min-width: 2900px) {
-   body {
-      margin: 0 35% 0 35%;
-   }
-}
 
 
 
