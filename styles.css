@@ -2,11 +2,6 @@
    font-family: 'Raleway', sans-serif;
 }
 
-figure { /* change this parameters to align cards! */
-   margin: 0;
-   padding: 0;
-} 
-
 /* defines all necessary icons */
 
 .location-icon {
@@ -68,6 +63,8 @@ figure { /* change this parameters to align cards! */
 .header-section {
    display: flex;
    justify-content: space-between;
+
+   padding: 0 1rem 0 1rem;
 }
 
 .logo {
@@ -75,14 +72,13 @@ figure { /* change this parameters to align cards! */
 }
 
 .logo-img {
-   width: 6rem;
-   height: 1.75rem;
+   width: 4.5rem;
+   height: 1.25rem;
 }
    
 .nav {
    display: flex;
-   display: space-around; /* not working, find out later why */ 
-   gap: 3rem;
+   gap: 3.5rem;
    padding-right: 3px;
 }
 
@@ -90,7 +86,7 @@ figure { /* change this parameters to align cards! */
    border-top: 3px solid white;
 }
 
-.accomodations:hover, .activities:hover { /* managed to create a hover for the nav section of the header but still have to work ot the box's top border's height*/ 
+.accomodations:hover, .activities:hover {
    color: rgba(0,101,252,1);
 
    border: 3px; 
@@ -105,20 +101,11 @@ figure { /* change this parameters to align cards! */
    padding-top: 2.5rem;
 }
 
+
+
 .accomodations a, .activities a {
    text-decoration: none;
    color: black;
-}
-
-/* displays titles as links */
-
-.link-titles {
-   text-decoration: none;
-   color: black;
-}
-
-.link-titles:hover {
-   color: rgba(0,101,252,1);
 }
 
 /* defines section 1 (find accomodation) */
@@ -126,30 +113,28 @@ figure { /* change this parameters to align cards! */
 .inside-section-1 {
    display: flex;
    flex-direction: column;
-   align-items: flex-start;
    
    gap: 1rem;
 }
 
-.title-section-1 {
-   font-size: large;
+.title-section-1 h1 {
+   font-size: larger;
 }
 
-.inside-section-1 p {
-   font-weight: 300;
-   margin-top: 0px;
+.title-section-1 a {
+   font-weight: 100;
+   font-size: 16px;
 }
 
 .accomodation-search {
    display: flex;
-   width: 22rem;
+   width: 22.5rem;
 }
 
 .location-icon {
    display: flex;
    justify-content: center;
-   width: 13%;
-   height: 2.5;
+   width: 11%;
    background-color: rgba(242,242,242,1);
    border: none;
    border-top-left-radius: 15px;
@@ -162,6 +147,16 @@ figure { /* change this parameters to align cards! */
    width: 56%;
 }
 
+input:focus {
+   outline: none;   
+   font-size: 22px;
+   padding-left: 0.75rem;
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+
 input {
    height: 3rem;
    width: 100%;
@@ -172,67 +167,66 @@ input {
 
 input::placeholder {
    font-weight: 600;
+   font-size: 16px;
    opacity: 1;
 }
 
 .search-button {
-   width: 31%;
+   width: 33%;
 }
 
-.accomodation-search button {
+.search-button-1 {
+   align-items: center;
    background-color: rgba(0,101,252,1);
-   border: rgba(0,101,252,1);
+
    border-top-right-radius: 15px;
    border-bottom-right-radius: 15px;
 
-   width: 100%;
-   height: 100%;
-   padding: 0.5rem;
-}
-
-.search-button .rechercher {
    color: white;
-   text-decoration: solid;
+   text-decoration: none;
    font-weight: 600;
-   font-size: medium;
-   padding: 3px;
+   font-size: 16px;
+   padding: 1rem; 
+
+
 }
 
-.search-button .magnifying-glass {
+.search-button-2 {
    display: none;
+}
+
+.search-button-1 a {
+   text-decoration: none;
+   color: white;
+   align-items: center;
 }
 
 .filters {
    display: flex;
    flex-direction: row;
-   flex-direction: left;
    align-items: center;
-   justify-content: space-between;
 
-   gap: 1rem;
+   gap: 2rem;
    margin-top: 1rem;
+}
+
+.filter-title {
+   font-weight: 600;
+   font-size: large;
 }
 
 .filter-buttons {
    display: flex;
    flex-wrap: wrap;
-
    
-   gap: 1rem; 
+   gap: 2rem; 
 }
 
-.filters a {
-   font-weight: 600;
-   cursor: pointer;
-}
+.costsaving, .family, .romantic, .pet-friendly {
+   display: flex;
+   align-items: center;
+   justify-self: center;
 
-.filter-buttons a {
-   text-decoration: none;
-   color: black;
-   margin-left: 0.20rem;
-}
-
-.filters button {
    background-color: white;
 
    border-radius: 25px;
@@ -240,12 +234,23 @@ input::placeholder {
    border-color: rgba(217,217,217,1);
    border-style: solid;
 
-   padding: 0.5rem 1rem 0.5rem 1rem;
-   
-   height: 100%;
+   background-color: white;
+
+   gap: 10px;
+
+   padding: 0.5rem 0rem 0.5rem 0.75rem;
 }
 
-.filters button:hover {
+.costsaving a, .family a, .romantic a, .pet-friendly a{
+   font-weight: 600;
+   font-size: 15px;
+   text-decoration: none;
+   color: black;
+
+   padding-right: 1rem;
+}
+
+.costsaving:hover, .family:hover, .romantic:hover, .pet-friendly:hover {
    background-color: rgba(0,101,252,0.2);
 }
 
@@ -290,11 +295,11 @@ main {
    flex-direction: column;
 
    gap: 2rem;
-   margin: 3rem 0rem 3rem 0rem;
+   margin: 3rem 1rem 3rem 1rem;
 }
 
 body {
-   margin: 0rem 2rem 0rem 2rem;
+   margin: 0rem 1.5rem 0rem 1.5rem;
 }
 
 .accomodation-and-pop-sections {
@@ -302,22 +307,14 @@ body {
    flex-direction: row;
    justify-content: space-between;
    flex-wrap: wrap;
-   gap: 1rem;
+   
+   gap: 2rem;
 }
 
 /* defines the layout of section 2*/
 
-
 .accomodation-section {
-   display: flex; 
-   flex-direction: column;
-   justify-content: space-between;
-
-   border-radius: 20px;
-
-   background-color: rgba(242,242,242,1);
-
-   width: 65%;
+   width: 63%;
 }
 
 .inside-section-2 {
@@ -325,34 +322,36 @@ body {
    flex-direction: column;
    justify-content: space-between;
 
-   gap: 2rem;
-   padding: 0.5rem 2rem 0.5rem 2rem;
+   border-radius: 20px;
+
+   background-color: rgba(242,242,242,1);
+
+   padding: 1rem 1rem 1rem 1rem;
 }
 
 .title-section-2 {
-   padding: 2rem 0 1rem 0rem;
+   padding: 1rem 0rem 1rem 2rem;
 }
 
 .accomodation-cards {
    display: flex;
    align-items: center;
    flex-wrap: wrap;
-   justify-content: space-between;
-   
+   justify-content: center;
 
-   gap: 0.75rem;
-   padding: 0rem 0rem 1rem 0rem;
+   gap: 1rem;
+
+   margin: 0rem 1rem;
 }
 
 .accomodation-card-image {
-   width: 13rem;
-   height: 8rem; /* must be redefined by sections because 
-                     the pictures have different size depending on the section */
-   border-top-left-radius: 20px; /* same, will need to change the corner 
-                                    for other sections that accomodation*/
+   width: 14rem;
+   height: 7rem; 
+
+   border-top-left-radius: 20px; 
    border-top-right-radius: 20px;
 
-   object-fit: cover ;
+   object-fit: cover;
 }                
 
 .accomodation-figure {
@@ -362,25 +361,40 @@ body {
    border-color: white;
    border-radius: 20px;
    box-shadow: 0px 3px 15px rgba(0,0,0,0.1);
+
+   margin: 0rem;
+}
+
+.accomodation-card article a  {
+   text-decoration: none;
 }
 
 .figcaption-accomodation-card {
    display: flex;
    flex-direction: column;
-   gap: 1rem;
-}
 
-.figcaption-accomodation-card a {
+   gap: 0.25rem;
+   padding-left: 0.5rem;
+
+   overflow: hidden;
+   text-overflow: ellipsis;
+
    text-decoration: none;
-   color: black;
 }
 
-.figcaption-accomodation-card a:hover {
+.figcaption-accomodation-card .name, .figcaption-accomodation-card .price {
+   color: black;
+   white-space: nowrap;
+   font-size: 14px;
+}
+
+.figcaption-accomodation-card .name:hover, .figcaption-accomodation-card .price:hover {
    color: rgba(0, 101, 252, 1);
+   text-decoration: none;
 }
 
 .show-more {
-   padding: 2rem 0 2rem 1rem;
+   padding: 3rem 0 3rem 2rem;
    font-weight: 600;
    font-size: larger;
    text-decoration: none;
@@ -406,16 +420,9 @@ body {
 
    background-color: rgba(242,242,242,1);
 
-   width: 33%;
-}
-
-.inside-section-3 {
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
+   width: 30%;
 
    padding: 1rem;
-   gap: 2rem;
 }
 
 .header-section-3 {
@@ -423,29 +430,21 @@ body {
    align-items: center;
    justify-content: space-between;
 
-   padding: 2rem,
+   margin-bottom: 1rem;
 }
 
 .pop-cards {
    display: flex;
    flex-direction: column;
-
-   gap: 4.5rem;
-   height: 80%;
-}
-
-.pop-card {
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-  
-   height: 33%; 
-
-   gap: 0.75rem
+   justify-content: space-evenly;
 }
 
 .pop-figure {
    display: flex;
+
+   width: 96%;
+
+   margin: 1rem 0rem;
 
    background-color: white;
    border-style: solid;
@@ -453,12 +452,12 @@ body {
    border-color: white;
    border-width: 5px;
    border-radius: 20px;
-   box-shadow: 0px 3px 15px rgba(0,0,0,0.1);
+   box-shadow: 0px 3px 15px rgba(0,0,0,0.1); 
 }
 
 .pop-card-image {
-   width: 135px;
-   height: 150px; /* must be redefined by sections because 
+   width: 7.5rem;
+   height: 7.5rem;/* must be redefined by sections because 
                      the pictures have different size depending on the section */
    border-top-left-radius: 20px; /* same, will need to change the corner 
                                     for other sections that accomodation*/
@@ -467,17 +466,21 @@ body {
    object-fit: cover;
 }
 
-.figcaption-pop-card {
-   display: flex;
-   flex-direction: column;
-
-   gap: 4rem;
+.pop-card article a , .pop-card a:hover, .pop-card a:visited, .pop-card a:link, .pop-card a:active {
+   text-decoration: none;
+   color: black;
 }
 
-.pop-text {
+.figcaption-pop-card {
    display: flex;
-   flex-direction: column;
+   flex-direction: column;   
    justify-content: space-between;
+   
+   padding: 0.5rem 1rem 0rem 0.5rem;
+
+   gap: 1.5rem;
+
+   font-size: 13px; 
 }
 
 .figcaption-pop-card a {
@@ -487,7 +490,6 @@ body {
 
 .figcaption-pop-card a:hover {
    color: rgba(0,101,252,1);
-
 }
 
 .name {
@@ -496,7 +498,6 @@ body {
 
 .price {
    font-weight: 300;
-   font-size: 14px;
 }
 
 /* defines the layout of section 4 */
@@ -510,7 +511,7 @@ body {
    display: flex;
    justify-content: space-between;
 
-   gap: 1rem;
+   gap: 2rem;
 }
 
 .activity-card {
@@ -520,7 +521,7 @@ body {
 .activity-card-image {
    object-fit: cover;
    width: 100%;
-   height: 27rem;
+   height: 25rem;
    border-radius: 20px 20px 0 0;
 }
 
@@ -528,6 +529,8 @@ body {
    background-color: white;
    border-radius: 20px;  
    box-shadow: 0px 3px 15px rgba(0,0,0,0.1);
+
+   margin: 0rem;
 }
 
 .activity-figure figcaption {
@@ -538,6 +541,9 @@ body {
    height: 3rem;
 
    font-weight: 600;
+
+   overflow: hidden;
+   text-overflow: ellipsis;
 }
 
 .activity-card a {
@@ -551,7 +557,7 @@ body {
 
 /* defines footer */
 
-.footer-nav {
+footer {
    list-style-type: none;
 
    display: flex; 
@@ -572,18 +578,410 @@ body {
    width: 100%;  
 }
 
-.footer-nav a {
+footer a {
    text-decoration: none;
    color: black;
 }
 
-.footer-nav a:hover {
+footer a:hover {
    color:rgba(0,101,252,1)
+}
+
+/* media queries for tablets */
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+   .search-button i {
+      display: none;
+   }
+
+   .accomodations a:hover, .activities a:hover {
+      color: rgba(0,101,252,1);
+   } 
+
+   .filters {
+      display: flex;
+      flex-wrap: wrap;
+   }
+
+   .accomodation-section {
+      width: 100%;
+   }
+
+   .accomodation-card {
+      width: 30%;
+   }
+   
+   .accomodation-card-image {
+      height: 8rem;
+      width: 100%;
+   }
+   
+   .popular-section {
+      width: 100%;
+
+      padding: 1rem;
+
+      display: flex;
+      flex-direction: row;
+
+   }
+
+   .inside-section-3 {
+      margin: 1rem;
+   }
+
+   .pop-cards {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      align-items: center;
+
+      width: 100%;
+
+      gap: 1rem;
+   }
+
+   .pop-card {
+      display: flex;
+      flex-direction: row;
+
+      width: 13rem;
+      height: 100%;
+   }
+
+   .pop-card-image {
+      width: 6rem;
+      height: 8rem
+   }
+
+   .figcaption-pop-card {
+      padding-right: 0.5rem;
+   }
+
+   .all-activity-cards {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      gap: 1rem;
+   } 
+   
+   .activity-card {
+      width: 25%;
+   }
+
+   .activity-card-image {
+      width: 100%;
+      height: 14rem;
+   }
+}
+ 
+
+/* media queries for phones */
+
+@media screen and (max-width: 767px) {
+   body {
+      margin: 0rem; 
+      padding: 0rem;
+   }
+
+   main {
+      margin: 0rem;
+   }
+
+   .header-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      gap: 1rem;
+
+      padding: 0rem;
+   }
+
+   .logo {
+      display: flex;
+      justify-content: center;
+   }
+
+   .logo-img {
+      width: 5.5rem;
+      height: 1.75rem;
+   }
+
+   .nav {
+      gap: 0rem;
+   }
+
+   .accomodations, .activities {
+      display: flex;
+      justify-content: center;
+      
+      width: 100%;
+      padding: 2rem 0 1rem 0;
+
+      border-bottom-width: 3px;
+      border-bottom-style: solid;
+      border-color: rgba(242,242,242,1);
+
+      border-top: none;
+   }
+
+   .accomodations:hover, .activities:hover {
+      border-top: none ;
+
+      color: rgba(0,101,252,1);
+
+      border-bottom-style: solid;   
+      border-bottom-width: 3px;
+   }
+
+   .accomodations a:hover, .activities a:hover{
+      color: rgba(0,101,252,1);
+   }
+
+   .search-section {
+      padding: 0 1rem 1rem 1rem;
+   }
+
+   .title-section-1 {
+      font-size: x-large;
+   }
+
+   .accomodation-search {
+      display: flex;
+      width: 100%;
+   }
+
+   .location-icon {
+      display: flex;
+      width: 11%;
+   }
+
+   .fa-location-dot {
+      display: flex;
+      align-items: center;
+   }
+
+   .search-bar {
+      display: flex;
+      width: 74%;
+   } 
+
+   input {
+      height: 3.5rem;
+   }
+
+   input::placeholder {
+      font-size: x-large;
+   }
+
+   .search-button{
+      width: 15%;
+   }
+
+   .search-button-1 {
+      display: none;
+   }
+
+   .search-button-2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      height: 100%;
+
+      color: white;
+      background-color: rgba(0,101,252,1);
+
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+   }
+
+   .search-button-2 a {
+      text-decoration: none;
+      color: white;
+   }
+
+   .fa-magnifying-glass {
+      display: flex;
+      justify-content: center;
+      font-size: 1.5rem;
+   }
+
+   .filters { 
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      width: 100%;
+   }
+
+   .filter-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      width: 100%;
+
+      gap: 0.5rem;
+   }
+
+   .costsaving, .family, .romantic, .pet-friendly {
+      width: 44%;
+      height: 2rem;
+
+      display: flex;
+      
+      padding-left: 0.5rem;
+   }
+
+   .costsaving a, .family a, .romantic a, .pet-friendly a {
+      font-size: 13px;
+   }
+
+   .fa-money-bill-wave, .fa-person, .fa-heart, .fa-dog {
+      font-size: 20px;
+   }
+
+   .info-text {
+      font-size: 19px;
+
+      padding: 0 1rem 0 0;
+   }
+
+   .inside-section-3 {
+      gap: 1rem;
+      padding: 1rem 2rem 3rem 2rem;
+   }
+
+   .popular-section {
+      order: 0;
+
+      width: 100%;
+      border-radius: 0;
+   }
+
+   .title-section-3 {
+      font-size: 17px;
+   }
+
+   .pop-cards {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      
+      gap: 2rem;
+
+      padding-top: 0rem;
+   } 
+
+   .pop-card {
+      gap: 1rem;
+
+      height: 10rem
+   }
+
+   .pop-card-image {
+      width: 10rem;
+      height: 10rem;
+   }
+
+   .figcaption-pop-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+     
+      gap: 1rem;
+   }
+
+   .pop-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 1rem;
+
+      font-size: 14px;
+   }
+
+   .accomodation-section {
+      order: 1;
+
+      width: 100%;
+
+      display: flex;
+      justify-content: center;
+   }
+
+   .inside-section-2 {
+      background-color: white;
+   }
+
+   .accomodation-cards {
+      display: flex;
+      justify-content: center;
+
+      gap: 1rem;
+   }
+
+   .accomodation-card {
+      width: 100%; 
+   }
+
+   .accomodation-card-image {
+      width: 100%;
+      height: 12rem;
+   }
+
+   .figcaption-accomodation-card {
+      gap: 3px;
+
+      padding: 0 0 0.5rem 0.5rem;
+   }
+
+   .show-more {
+      display: none;
+   }
+
+   .activity-section {
+       padding: 2rem;
+   }
+
+   .all-activity-cards {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      gap: 1rem;
+   }
+
+   .activity-card {
+      width: 100%;
+   }
+
+   .activity-card-image {
+      width: 100%;
+      height: 15rem;
+   }
+
+   footer {
+      display: flex;
+      flex-direction: column;
+
+      font-weight: 500;
+      gap: 3rem;
+   }
+
+   footer .about, footer .offer, footer .help {
+      gap: 1rem;
+      font-weight: 400;
+   }
 }
 
 /* media queries very big screens */
 
-@media screen and (min-width: 1550px) {
+@media screen and (min-width: 1401px) {
    body {
       margin: 0 4% 0 4%;
    }
@@ -612,3 +1010,7 @@ body {
       margin: 0 35% 0 35%;
    }
 }
+
+
+
+   
