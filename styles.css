@@ -827,17 +827,17 @@ footer a:hover {
       width: 100%;
 
       gap: 0.5rem;
-
-   
    }
 
    .costsaving, .family, .romantic, .pet-friendly {
-      width: 44%;
+      width: 43%;
       height: 2rem;
 
       display: flex;
       
-      padding-left: 0.75rem;
+      padding-left: 0.5rem;
+
+      overflow: hidden;
    }
 
    .costsaving a, .family a, .romantic a, .pet-friendly a {
@@ -851,7 +851,7 @@ footer a:hover {
    .info-text {
       font-size: 19px;
 
-      padding: 0 1rem 0 0;
+      padding: 0rem 1rem 0rem 0rem;
    }
 
    .inside-section-3 {
